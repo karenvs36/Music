@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background: linear-gradient(to right, #7fa1ff 50%,#ffabe6 50%);
+    overflow: hidden;
+}
+
+.k {
+    display: block;
+    float: right;
+    background-color: #ffabe6; 
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    position: relative; 
+    transition: transform 0.5s ease;
+}
+
+.k h2 {
+    font-family: sans-serif;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    font-size: 45px;
+    color: rgb(35, 38, 41);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    transition: opacity 0.5s ease;
+}
+
+.k:hover {
+    background-color: rgba(255, 171, 230, 0.9); 
+    transition: background-color 0.5s ease;
+}
+
+
+.h {
+    display: block;
+    background-color: #7fa1ff;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    position: relative; 
+    transition: transform 0.5s ease; 
+    position: relative;
+}
+
+.h:hover {
+    background-color: rgba(127, 161, 255, 0.9);
+    transition: background-color 0.5s ease; 
+}
+
+.h h2 {
+    font-family: sans-serif;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    font-size: 45px;
+    color: rgb(35, 38, 41);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    transition: opacity 0.5s ease;
+}
+
+
+/*slide animation*/
+@keyframes slideRightAnimation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+.slideRight {
+    animation: slideRightAnimation 1s ease forwards;
+}
+
+.slideLeft {
+    animation: slideLeftAnimation 1s ease forwards;
+    z-index: 1;
+}
+
+@keyframes slideLeftAnimation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
